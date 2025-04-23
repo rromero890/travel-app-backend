@@ -10,7 +10,7 @@ app.use(cors({
   origin: ["https://yourtravelapp.netlify.app", "http://localhost:5173"],
   credentials: true
 }));
-e(express.json());
+app.use(express.json());;
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
